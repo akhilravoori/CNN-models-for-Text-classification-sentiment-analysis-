@@ -23,12 +23,12 @@ def strip_emoticons(s):
 
     return emoji_pattern.sub(r'', s.strip())
 
-authenticator = IAMAuthenticator('bjs7HIbH9SNgnpDIDy6rx3Ynmb_5SPetzmaXXv7t3_KL')
+authenticator = IAMAuthenticator('authentication key')
 tone_analyzer = ToneAnalyzerV3(
     version='2020-03-26',
     authenticator=authenticator
 )
-tone_analyzer.set_service_url('https://api.eu-gb.tone-analyzer.watson.cloud.ibm.com/instances/33756fab-977f-4818-8b4c-f8bf06e8e91e')
+tone_analyzer.set_service_url('service_url')
 df=pd.read_csv('/home/akhil/Desktop/Projects/inf_project/t5.csv')
 df1=pd.read_csv('/home/akhil/Desktop/Projects/inf_project/covid2019.csv')
 x=df.tweet_text
